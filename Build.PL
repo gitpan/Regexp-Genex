@@ -7,6 +7,7 @@ Module::Build->new(
 	license => 'perl',
 	requires => {
 		'YAPE::Regex' => 3.01, # hmm 
+		'String::Escape' => 2002.001,
 		#perl => 5.6.0,
 	},
 	create_makefile_pl => 'traditional',

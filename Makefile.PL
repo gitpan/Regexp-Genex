@@ -5,6 +5,7 @@ WriteMakefile
           'NAME' => 'Regexp::Genex',
           'VERSION_FROM' => 'lib/Regexp/Genex.pm',
           'PREREQ_PM' => {
+                           'String::Escape' => '2002.001',
                            'YAPE::Regex' => '3.01'
                          },
           'INSTALLDIRS' => 'site',

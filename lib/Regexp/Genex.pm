@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Carp ();
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 our $MAX_QUANTIFIER = 20;
 our $rx;
@@ -17,7 +17,6 @@ our @stack = {
 
 use YAML;
 package Regexp::Genex::Element;
-use String::Escape qw(printable);
 use List::Util qw(shuffle);
 
 my $top = -1;

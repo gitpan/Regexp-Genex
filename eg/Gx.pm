@@ -18,6 +18,7 @@ name space in public (I don't have any claim to Gx...)
 use strict; use warnings;
 require Exporter;
 our @ISA = qw(Exporter);
+our $VERSION = 0.06;
 
 # I can do this b/c we're close friends:
 use Regexp::Genex qw(:all);  # We want it all
