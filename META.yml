@@ -1,0 +1,11 @@
+--- #YAML:1.0
+name: Regexp-Genex
+version: 0.05
+author:
+  - Brad Bowman, E<lt>genex@bowman.bsE<gt>
+abstract: get the strings a regex will match, with a regex
+license: perl
+requires:
+  YAPE::Regex: 3.01
+provides: {}
+generated_by: Module::Build version 0.25
