@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Carp ();
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 our $MAX_QUANTIFIER = 20;
 our $rx;
@@ -15,7 +15,6 @@ our @stack = {
 }; 
 
 
-use YAML;
 package Regexp::Genex::Element;
 use List::Util qw(shuffle);
 
@@ -129,10 +128,6 @@ sub escape {
 #use String::Escape qw(qprintable);
 #print qprintable($_)," = ",escape($_),"\n" 
 #	for grep { $_ ne eval escape($_) } map chr, 0..255;
-
-sub Dump { # XXX
-	print YAML::Dump($_[0]);
-}
 
 package Regexp::Genex::flags;
 sub new {

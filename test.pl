@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use Test::More tests => 22;
+use Test::More tests => 25;
 
 BEGIN { use_ok( 'Regexp::Genex' ); }
 
@@ -50,3 +50,16 @@ is($gen->(0),'a');
 is($gen->(),'ab');
 
 ok(generator_rx(qr/ab*?/));
+
+{
+    # [rt.cpan.org #23762] Wrong strings() output for long (?) regexpes
+    is_deeply([strings('123456789[i]')],['123456789i']);
+
+    # just over the default output length
+    local $Regexp::Genex::DEFAULT_LEN = 10;
+    is_deeply([strings('1234567890[i]')],['1234567890[i]']);
+
+    # increase the limit
+    local $Regexp::Genex::DEFAULT_LEN = 20;
+    is_deeply([strings('1234567890[i]')],['1234567890i']);
+}

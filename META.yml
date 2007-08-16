@@ -1,12 +1,12 @@
---- #YAML:1.0
-name: Regexp-Genex
-version: 0.06
-author:
-  - Brad Bowman, E<lt>genex@bowman.bsE<gt>
-abstract: get the strings a regex will match, with a regex
-license: perl
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Regexp-Genex
+version:      0.07
+version_from: lib/Regexp/Genex.pm
+installdirs:  site
 requires:
-  String::Escape: 2002.001
-  YAPE::Regex: 3.01
-provides: {}
-generated_by: Module::Build version 0.25
+    String::Escape:                2002.001
+    YAPE::Regex:                   3.01
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30_01
